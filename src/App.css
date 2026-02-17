@@ -1,0 +1,203 @@
+:root {
+  --neutral-900: hsl(227, 75%, 14%);
+  --neutral-800: hsl(226, 25%, 17%);
+  --neutral-700: hsl(225, 23%, 24%);
+  --neutral-600: hsl(226, 11%, 37%);
+  --neutral-300: hsl(0, 0%, 78%);
+  --neutral-200: hsl(217, 61%, 90%);
+  --neutral-100: hsl(0, 0%, 93%);
+  --neutral-0: hsl(200, 60%, 99%);
+
+  --red-400: hsl(3, 86%, 64%);
+  --red-500: hsl(3, 71%, 56%);
+  --red-700: hsl(3, 77%, 44%);
+}
+
+.page-wrapper {
+  max-width: 102.4rem;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: var(--neutral-0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  margin-top: 3rem;
+  border-radius: 2rem;
+}
+
+.theme-toggle {
+  all: unset;
+  background-color: var(--neutral-100);
+  height: 4rem;
+  width: 4rem;
+  border-radius: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.theme-toggle:hover {
+  background-color: var(--neutral-300);
+  transition: 0.15s;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+.filter-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem 0rem 2rem;
+}
+
+.control-bar {
+  display: flex;
+  gap: 1rem;
+}
+
+.filter-button {
+  all: unset;
+  background-color: var(--neutral-0);
+  padding: 1rem 2rem;
+  border-radius: 2.4rem;
+  font-family: inherit;
+  font-weight: 500;
+  color: var(--neutral-700);
+  font-size: 1.6rem;
+}
+
+.filter-button:hover {
+  cursor: pointer;
+  color: var(--neutral-0);
+  background-color: var(--red-500);
+  transition: 0.15s;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.6rem;
+  background-color: var(--neutral-0);
+  border-radius: 1.4rem;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.4rem;
+}
+
+.logo-wrapper {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.card-main {
+  display: flex;
+  padding-bottom: 4rem;
+}
+
+.card-title {
+  color: var(--neutral-700);
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0.7rem;
+}
+
+.card-description {
+  color: var(--neutral-600);
+  font-size: 1.3rem;
+}
+
+.card-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.remove-button {
+  border-radius: 1.4rem;
+  border: 0.1rem solid var(--neutral-300);
+  background-color: var(--neutral-0);
+  color: var(--neutral-900);
+  font-family: "NotoSans";
+  font-weight: 500;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  transition: 0.15s;
+}
+
+.remove-button:hover {
+  background-color: var(--red-700);
+  color: var(--neutral-0);
+  border-color: var(--red-500);
+}
+
+.toggle-track {
+  position: relative;
+  height: 1.8rem;
+  width: 3.2rem;
+  border-radius: 2.4rem;
+  background-color: var(--neutral-300);
+  transition: 0.15s;
+  cursor: pointer;
+}
+
+.slide-ball {
+  position: absolute;
+  height: 1.4rem;
+  width: 1.4rem;
+  background-color: var(--neutral-0);
+  border-radius: 50%;
+  left: 0.2rem;
+  top: 0.2rem;
+  transition: 0.15s;
+}
+
+input[type="checkbox"] {
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+.toggle-track:has(input:checked) {
+  background-color: var(--red-700);
+}
+
+input[type="checkbox"]:checked + .slide-ball {
+  transform: translatex(1.4rem);
+}
+
+.toggle-track:has(input:focus-visible) {
+  box-shadow:
+    0 0 0 1px white,
+    0 0 0 3px var(--red-400);
+}
+
+.extension-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  box-shadow:
+    0 0 0 1px white,
+    0 0 0 3px var(--red-400);
+  outline: none;
+}

@@ -1,0 +1,41 @@
+/* @font-face {
+  font-family: "NotoSans";
+  src: url("assets/fonts/static/NotoSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "NotoSans";
+  src: url("assets/fonts/static/NotoSans-Medium.ttf") format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "NotoSans";
+  src: url("assets/fonts/static/NotoSans-Bold.ttf") format("truetype");
+  font-weight: bold;
+} */
+
+@font-face {
+  font-family: "NotoSans";
+  src: url("assets/fonts/NotoSans-VariableFont_wdth\,wght.ttf")
+    format("truetype-variations");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(217, 61%, 90%);
+  font-family: "NotoSans";
+  font-size: 1.6rem;
+}
