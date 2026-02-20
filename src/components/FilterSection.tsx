@@ -1,15 +1,36 @@
-export default function FilterSection() {
+import React from "react";
+
+interface IProps {
+  filter: string;
+  setFilter: React.Dispatch<
+    React.SetStateAction<"all" | "active" | "inactive">
+  >;
+}
+
+export default function FilterSection({ filter, setFilter }: IProps) {
   return (
     <div className="filter-section">
       <h1 className="title">Extensions List</h1>
       <div className="control-bar" role="tablist">
-        <button role="tab" className="filter-button all">
+        <button
+          onClick={() => setFilter("all")}
+          role="tab"
+          className={"filter-button " + (filter === "all" ? "active" : "")}
+        >
           All
         </button>
-        <button role="tab" className="filter-button active">
+        <button
+          onClick={() => setFilter("active")}
+          role="tab"
+          className={"filter-button " + (filter === "active" ? "active" : "")}
+        >
           Active
         </button>
-        <button role="tab" className="filter-button inactive">
+        <button
+          onClick={() => setFilter("inactive")}
+          role="tab"
+          className={"filter-button " + (filter === "inactive" ? "active" : "")}
+        >
           Inactive
         </button>
       </div>

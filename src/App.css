@@ -201,3 +201,8 @@ textarea:focus-visible {
     0 0 0 3px var(--red-400);
   outline: none;
 }
+
+.active {
+  color: var(--neutral-0);
+  background-color: var(--red-700);
+}
